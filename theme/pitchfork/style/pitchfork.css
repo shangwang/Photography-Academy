@@ -1,0 +1,122 @@
+html,body{
+	height:100%;
+	background: black;
+}
+
+body {
+	font-family: helvetica;
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 0px;
+	line-height: 1.2em;
+}
+
+hr {
+	display: none;
+}
+
+a {
+	color: #a30046;
+	text-decoration: none;
+}
+
+input[type=submit]{
+	/*border: solid 1px #999;
+	padding: 6px;
+	border-radius: 3px;
+	background: url([[pix:theme|button-gradient]]) #CCC;
+	box-shadow: inset 0 -1px 0 white;
+	cursor: pointer;*/
+	border: 0;
+	padding: 10px;
+	background: #ffc425;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+input[type=text]{
+	border: solid 1px #999;
+	line-height: 38px;
+	margin-right: 5px;
+}
+
+#adminsearchquery {
+	margin-bottom: 5px;
+}
+
+.headermain {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: -2px;
+	line-height: 1.2em;
+}
+
+.header {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1.2em;
+}
+
+.navbar {
+	padding: 10px;
+}
+
+.block {
+	border: 0;
+	background: #ffc425;
+	padding: 10px;
+}
+
+.logininfo {
+	font-size: 1.2em;
+}
+
+.navbar {
+	background: rgba(0,0,0,0.8);
+}
+
+#page-header {
+	background: #a30046;
+	color: white;
+}
+
+#page-header a {
+	color: #ffc425;
+}
+
+#page-content {
+	background: white;
+}
+
+#page-footer{ 
+	background: black;
+	color: white;
+	padding: 20px 0;
+}
+
+.breadcrumb {
+	margin-top: 12px;	
+}
+
+.generalbox {
+	border: 0;
+}
+
+.block input[type=submit]{
+	background: white;
+}
+
+.minicalendarblock {
+	margin-left: -12px;
+}
