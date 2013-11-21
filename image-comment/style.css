@@ -1,0 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	font-family: “Lucida Grande”, sans-serif;
+	font-size: 10.4px;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 1.5em;
+	padding: 50px;
+}
+
+strong {
+	font-weight: bolder;
+}
+
+.imageCommentContainer {
+	padding-right: 300px;
+	background: #333;
+	display: inline-block;
+	border: solid 1px black;
+	position: relative;
+}
+
+.imageComment {
+	display: inline-block;
+	background: white;
+	display: block;	
+}
+
+.imageCommentList {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	overflow: scroll;
+}
+
+.imageCommentList li {
+	height: auto;
+	background: rgba(255,255,255, 0.8);
+	padding: 10px;
+	border: solid 1px black;
+	border-top: 0;
+	border-right: 0;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	cursor: crosshair;
+}
+
+.selection {
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	top: 20px;
+	left: 20px;
+	border: solid 1px black;
+	background: rgba(255,255,255, 0.2);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.commentBox {
+	display: none;
+	border: solid 1px black;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background: white;
+	z-index: 3;
+	min-width: 200px;
+	padding: 10px;
+}
+
+.commentBox textarea {
+	width: 100%;
+}
+.commentBox a {
+	float: right;
+	display: inline-block;
+	border: solid 1px #999;
+	background: #CCC;
+	padding: 5px;
+	color: black;
+	width: auto;
+	text-decoration: none;
+	cursor: pointer;
+}
