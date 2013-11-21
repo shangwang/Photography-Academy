@@ -241,7 +241,43 @@
     $PAGE->set_title(get_string('course') . ': ' . $course->fullname);
     $PAGE->set_heading($course->fullname);
     echo $OUTPUT->header();
+	/*****************************************************************/
+	$image = "image/1.jpg";
+	/*  
+$width = 500;
+$height = 300;
+*/
+echo '
+<html>
+<div id="page_head" align = "middle"> 
+	<h2 >Photo of the Week</h2>
+	<h1>Meadow of Yellow Flowers and Mountains</h1>
 
+				</div>
+				
+				<div id="content_top">
+	<div id="pod_bar" class="clearfix">
+	   
+	   
+		<div id="pod_right">
+			<p class="publication_time">November 21, 2013</p>
+			
+		</div>
+	</div>
+	<div class="primary_photo">
+		
+		<a href="/photography/photo-of-the-day/" title="Go to the previous Photo of the Day">
+
+
+	<img src="image/photo of the week/1.jpg" width="990" height="742" alt="Landscape">	
+
+
+		</a>
+	</div><!-- .primary_photo-->
+</div>
+</html>
+';
+    /*****************************************************************/
     if ($completion->is_enabled() && ajaxenabled()) {
         // This value tracks whether there has been a dynamic change to the page.
         // It is used so that if a user does this - (a) set some tickmarks, (b)
