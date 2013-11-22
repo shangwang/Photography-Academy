@@ -9,7 +9,7 @@
     require_once($CFG->libdir.'/completionlib.php');
 
     $id          = optional_param('id', 0, PARAM_INT);
-    $name        = optional_param('name', '', PARAM_RAW);
+    $name        = optional_param('name', 'photo-101', PARAM_RAW);
     $edit        = optional_param('edit', -1, PARAM_BOOL);
     $hide        = optional_param('hide', 0, PARAM_INT);
     $show        = optional_param('show', 0, PARAM_INT);
@@ -23,6 +23,7 @@
     $return      = optional_param('return', 0, PARAM_LOCALURL);
 
     $params = array();
+	
     if (!empty($name)) {
         $params = array('shortname' => $name);
     } else if (!empty($idnumber)) {
@@ -32,6 +33,7 @@
     }else {
         print_error('unspecifycourseid', 'error');
     }
+	
 
     $course = $DB->get_record('course', $params, '*', MUST_EXIST);
 
@@ -242,49 +244,41 @@
     $PAGE->set_heading($course->fullname);
     echo $OUTPUT->header();
 	/*****************************************************************/
-	$image = "image/1.jpg";
-	/*  
-$width = 500;
-$height = 300;
-*/
+	
 echo '
 <html>
 <div id="page_head" align = "middle"> 
-	<h2 >Photo of the Week</h2>
-	<h1>Meadow of Yellow Flowers and Mountains</h1>
+	<h2 >Topic for next week</h2>
+	<h1>Bridge</h1>
 
 </div>
 				
-<div id="content_top">
-  
-	   
-	   
-    <div id="pod_right">
-			<p class="publication_time">November 21, 2013</p>
-			
-    </div>
- 
-    <div class="primary_photo">
-	
-		<a href="image/photo of the week" title="Go to the previous Photo of the Day">
 
 
-	       <img src="image/photo of the week/1.jpg" width="990" height="742" alt="Landscape">	
+ <!--------------------------------top 3 ---------------------->
+<h3>Top  photos</h3>
+<table border="0">
+<tr>
+<td>
+<a href="../image-comment/index.html">
+<img src="../image-comment/img.jpg" width="350" height="280" alt="3">
+</a>
+</td>
+<td><img src="image/photo of the week/1.1.jpg" width="350" height="280" alt="4">	</td>
+<td><img src="image/photo of the week/2.1.jpg" width="350" height="280" alt="5">	</td>
+</tr>
+<tr>
+<td><img src="image/photo of the week/3.1.jpg" width="350" height="280" alt="6">	</td>
+<td><img src="image/photo of the week/4.1.jpg" width="350" height="280" alt="7">	</td>
+<td><img src="image/photo of the week/5.1.jpg" width="350" height="280" alt="8">	</td>
+</tr>
 
+</table>
 
-		</a>
-	</div><!-- .primary_photo-->
-	<div>
-	    <a href="ph_submit.php">
-		  <p>Next Week</p>
-		</a>
-	</div>
-</div>
-
+<!-------------------------------top 3 end---------------------------->
 </html>
 ';
     /*****************************************************************/
-	
     if ($completion->is_enabled() && ajaxenabled()) {
         // This value tracks whether there has been a dynamic change to the page.
         // It is used so that if a user does this - (a) set some tickmarks, (b)

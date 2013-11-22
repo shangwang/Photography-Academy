@@ -9,7 +9,7 @@
     require_once($CFG->libdir.'/completionlib.php');
 
     $id          = optional_param('id', 0, PARAM_INT);
-    $name        = optional_param('name', '', PARAM_RAW);
+    $name        = optional_param('name', 'photo-101', PARAM_RAW);
     $edit        = optional_param('edit', -1, PARAM_BOOL);
     $hide        = optional_param('hide', 0, PARAM_INT);
     $show        = optional_param('show', 0, PARAM_INT);
@@ -23,6 +23,7 @@
     $return      = optional_param('return', 0, PARAM_LOCALURL);
 
     $params = array();
+	
     if (!empty($name)) {
         $params = array('shortname' => $name);
     } else if (!empty($idnumber)) {
@@ -32,6 +33,7 @@
     }else {
         print_error('unspecifycourseid', 'error');
     }
+	
 
     $course = $DB->get_record('course', $params, '*', MUST_EXIST);
 
@@ -250,41 +252,193 @@ $height = 300;
 echo '
 <html>
 <div id="page_head" align = "middle"> 
-	<h2 >Photo of the Week</h2>
-	<h1>Meadow of Yellow Flowers and Mountains</h1>
+	<h2 >Topic for next week</h2>
+	<h1>Bridge</h1>
 
 </div>
 				
-<div id="content_top">
+
+<!----------------------------------part1 begin--------------------------------------->
+<div id="step1">
+
+  <h3 id="steptitle1" class="steptitle">
+   
+Description:
+   </h3>
+   
+  <div id="stepcontent1" class="stepcontent">
   
-	   
-	   
-    <div id="pod_right">
-			<p class="publication_time">November 21, 2013</p>
-			
-    </div>
- 
-    <div class="primary_photo">
-	
-		<a href="image/photo of the week" title="Go to the previous Photo of the Day">
+     
+   
+     
 
 
-	       <img src="image/photo of the week/1.jpg" width="990" height="742" alt="Landscape">	
 
 
-		</a>
-	</div><!-- .primary_photo-->
-	<div>
-	    <a href="ph_submit.php">
-		  <p>Next Week</p>
-		</a>
-	</div>
+<div class="field">
+  <div style="color:#000000">  
+  "In photography there is no real representation, as the mechanics of the camera lens differ greatly from the human eye. Therefore there is no true color, context, angle, field of vision, focus, scale, etc. in a photograph.
+This allows a photograph to be taken in such a way as to encourage an alternate perception of its commonly accepted reality; to question and evaluate how and why we insist on constraining our perception to one reality when there are infinite possibilities and when, in some way, reality either ceases to exist or never existed to begin with."
+  </div>
+    <span class="fieldErrorText"></span>
+  
 </div>
 
+
+<li>
+<div class="label">
+          Instructions
+    </div>
+
+<div class="field">
+  <div class="vtbegenerated"><p>Submit your deliverable as a zip file here. Make sure you have all the submission materials inside the zip file. One submission per group is sufficient.</p>
+<p>Submission materials are:</p>
+<ol>
+<li>A photo.</li>
+<li>A paragraph explaining.</li>
+
+</ol>
+
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+
+<li>
+<div class="label">
+          Due Date
+    </div>
+
+<div class="field">
+    <input type="hidden" name="dueDate" id="dueDate" value="Thursday, November 21, 2013 11:59:00 PM MST">
+  A week after the start date.
+
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+
+
+   </ol>
+  </div>
+  
+ </div>
+<!-------------------------part1 end------------------------------>
+<!------------------------------part2--------------------------->
+<div id="step2">
+  <h3 id="steptitle2" class="steptitle">
+  
+Submission
+   </h3>
+   
+  <div id="stepcontent2" class="stepcontent">
+   
+     
+   
+    
+ 
+ <div class="field">
+      <div class="fileInputWrapper">
+   <label for="newFile_chooseLocalFile" class="hideoff">Attach Local File</label>
+   <input class="hiddenInput" type="file" id="newFile_chooseLocalFile" title="Browse My Computer">
+   
+  </div>
+           </div> 
+
+  <li id="newFile_listHtmlDiv" style="display:none;">
+  <div class="label">
+   Attached files
+  </div>
+  <div class="noLabelField">
+   <table class="attachments" id="newFile_table" summary="This is a table showing the attributes of a collection of items.">
+ <thead>
+  
+                        
+    
+  <tr>
+     <th scope="col" class="" align="LEFT">File Name</th>
+   <th scope="col" class="" align="LEFT">Link Title</th>
+   <th scope="col" class="" align="LEFT"></th>
+   </tr>
+ </thead>
+ <tbody id="newFile_table_body"> 
+  </tbody>
+</table>
+
+     </div>
+
+ 
+
+
+
+
+
+
+<!-- End textbox -->
+     
+  
+    <span class="fieldErrorText"></span>
+  
+
+
+  
+  </div>
+  
+ </div>
+ <!-------------------------------part2 end------------------------------->
+ <!------------------------------part3 begin-------------------------------->
+ <div id="step3">
+  <h3 id="steptitle3" class="steptitle">
+  
+Add Comments
+   </h3>
+   
+  <div id="stepcontent3" class="stepcontent">
+
+<div class="label label-stack">
+        <label for="student_commentstext">
+      Comments
+    </label>
+    </div>
+
+<div class="noLabelField">
+  
+   <textarea rows="10" cols="100">
+ 
+</textarea>
+
+
+
+<!-- End textbox -->
+     
+  
+   
+  
+</div>
+
+  </div>
+  
+ </div>
+ <!------------------------------part3 end-------------------------------------->
+ <!--------------------------------top 3 ---------------------->
+<h3>Top 3 photos</h3>
+<table border="0">
+<tr>
+<td><img src="image/photo of the week/1.1.jpg" width="250" height="200" alt="3">	</td>
+<td><img src="image/photo of the week/2.1.jpg" width="250" height="200" alt="4">	</td>
+<td><img src="image/photo of the week/3.1.jpg" width="250" height="200" alt="5">	</td>
+</tr>
+
+</table>
+<div>
+	    <a href="ph_showAll.php">
+		  <p>Show All</p>
+		</a>
+	</div>
+<!-------------------------------top 3 end---------------------------->
 </html>
 ';
     /*****************************************************************/
-	
     if ($completion->is_enabled() && ajaxenabled()) {
         // This value tracks whether there has been a dynamic change to the page.
         // It is used so that if a user does this - (a) set some tickmarks, (b)
