@@ -45,6 +45,7 @@
     $cm = get_coursemodule_from_instance('forum', $forum->id, $course->id, false, MUST_EXIST);
 
     require_course_login($course, true, $cm);
+    $PAGE->requires->jquery();
 
     // move this down fix for MDL-6926
     require_once($CFG->dirroot.'/mod/forum/lib.php');
@@ -263,6 +264,39 @@
     forum_print_discussion($course, $cm, $forum, $discussion, $post, $displaymode, $canreply, $canrate);
 
     echo $OUTPUT->footer();
+    ?>
+    
+    
+    <div id="compare" style=" background: rgb(255,254,237); position: fixed; border:1px solid black; text-aligh: center; overflow:auto; top: 180px; right: 100px; width: 200px; height: auto; font:12px SimSun; display: none">
+    <div id="compare_top" style=" font-size:14px; line-height:26px; background:orange; text-align: center; font-weight: bold; width: 100%" >
+    Compare Tool 
+    <em id="boxClose" class="close" onClick="javascript:$('#compare').css('display','none');" style=" font:14px SimSun; text-align: center; float: right; width: 14px; height: 14px; margin:5px; cursor: pointer ">X</em>
+    </div>
+    <ul id="compare_images" style="width=200px; clear: both; float: left; ">
+    </ul>
+    <form id="compare_btn" action="compare.php" method="post" action target="_blank" style="width:100%; text-align: center">
+    <input id="comp-param-btn" type="submit" value="Compare" style="width: 110px; font-size:100%; cursor: pointer; text-align: center">
+    </form>
+    </div>   
+    <script>
 
+        var n=0;
+         
+    	var images = $('.forumpost .content img').click(function(e){
+    		$('#compare').css('display','block');
+    		n++;
+        	if (n<=3){
+            var p=this.cloneNode();
+            p.height=80;
+            p.width=150;
+            $('#compare_images').append(p);
+            }
+            if (n>3)
+                {alert('you can add only 3 images!');}
+//    		var newWindow = open('http://www.baidu.com','_blank','menubar=yes,toolbar=yes,location=no,directories=yes,status=yes, scrollbars=yes,resizable=yes');			
+    	});
+    	
+    	
+    </script>
 
 
