@@ -318,6 +318,11 @@
 
                 },
                 {
+                    title:"Solitude",
+                    mp3:"Shang/BackgroundMusics/Solitude.mp3"
+
+                },
+                {
                     title:"Bicycle Tricycle",
                     mp3:"Shang/BackgroundMusics/Bicycle Tricycle.m4a"
 
@@ -326,7 +331,7 @@
                     title:"Have You Seen My Love",
                     mp3:"Shang/BackgroundMusics/Have You Seen My Love.m4a"
                 },
-                
+
                 {
                     title:"Naruto's day",
                     mp3:"Shang/BackgroundMusics/Naruto's day.mp3"
