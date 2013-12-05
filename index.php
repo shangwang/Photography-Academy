@@ -342,13 +342,25 @@
                     mp3:"Shang/BackgroundMusics/Alone.mp3"
                 }
             ], {
+				playlistOptions: {
+    			autoPlay: true
+  				},
+				
                 swfPath: "js",
                 supplied: "oga, mp3",
                 wmode: "window",
                 smoothPlayBar: true,
                 keyEnabled: true
+				
             });
+	
+			
         });
+		
+	
+		
+		
+		
         //]]>
     </script>
 </head>

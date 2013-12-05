@@ -99,6 +99,9 @@ echo $assign->view(optional_param('action', '', PARAM_TEXT));
                     mp3:"../../Shang/BackgroundMusics/Have You Seen My Love.m4a"
                 }
             ], {
+				playlistOptions: {
+    			autoPlay: true
+  				},
                 swfPath: "js",
                 supplied: "oga, mp3",
                 wmode: "window",
@@ -134,6 +137,9 @@ echo $assign->view(optional_param('action', '', PARAM_TEXT));
 
                 }
             ], {
+				playlistOptions: {
+    			autoPlay: true
+  				},
                 swfPath: "js",
                 supplied: "oga, mp3",
                 wmode: "window",
@@ -168,6 +174,9 @@ echo $assign->view(optional_param('action', '', PARAM_TEXT));
 
                 }
             ], {
+				playlistOptions: {
+    			autoPlay: true
+  				},
                 swfPath: "js",
                 supplied: "oga, mp3",
                 wmode: "window",
@@ -204,6 +213,9 @@ echo $assign->view(optional_param('action', '', PARAM_TEXT));
 
                 }
             ], {
+				playlistOptions: {
+    			autoPlay: true
+  				},
                 swfPath: "js",
                 supplied: "oga, mp3",
                 wmode: "window",

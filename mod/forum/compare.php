@@ -9,14 +9,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="moodle, PHC100: Photo compare">
 <link rel="stylesheet" type="text/css" href="http://localhost/Photography-Academy/theme/yui_combo.php?3.9.1/build/cssreset/cssreset-min.css&amp;3.9.1/build/cssfonts/cssfonts-min.css&amp;3.9.1/build/cssgrids/cssgrids-min.css&amp;3.9.1/build/cssbase/cssbase-min.css">
-<script type="text/javascript" src="http://localhost/Photography-Academy/theme/yui_combo.php?3.9.1/build/simpleyui/simpleyui-min.js&amp;3.9.1/build/loader/loader-min.js"></script>
-<script type="text/javascript" src="http://localhost/Photography-Academy/theme/jquery.php/core/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="http://localhost/Photography-Academy/js/jquery.exif.js"></script>
+<script type="text/javascript" src="../../theme/yui_combo.php?3.9.1/build/simpleyui/simpleyui-min.js&amp;3.9.1/build/loader/loader-min.js"></script>
+<script type="text/javascript" src="../../theme/jquery.php/core/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.exif.js"></script>
 <script charset="utf-8" id="yui_3_9_1_2_1386055242465_5" src="http://localhost/Photography-Academy/lib/javascript.php/1385025328/blocks/dock.js" async=""></script>
 <link charset="utf-8" rel="stylesheet" id="yui_3_9_1_2_1386055242465_227" href="http://localhost/Photography-Academy/theme/yui_combo.php?3.9.1/build/widget-base/assets/skins/sam/widget-base.css&amp;3.9.1/build/cssbutton/cssbutton-min.css&amp;3.9.1/build/widget-modality/assets/skins/sam/widget-modality.css&amp;3.9.1/build/widget-stack/assets/skins/sam/widget-stack.css&amp;3.9.1/build/panel/assets/skins/sam/panel.css">
 <script charset="utf-8" id="yui_3_9_1_2_1386055242465_229" src="http://localhost/Photography-Academy/theme/yui_combo.php?3.9.1/build/panel/panel-min.js&amp;3.9.1/build/yui-throttle/yui-throttle-min.js&amp;3.9.1/build/dd-ddm-base/dd-ddm-base-min.js&amp;3.9.1/build/dd-drag/dd-drag-min.js&amp;3.9.1/build/dd-plugin/dd-plugin-min.js&amp;moodle/1385025328/core/notification/notification-min.js&amp;3.9.1/build/cache-base/cache-base-min.js&amp;3.9.1/build/json-stringify/json-stringify-min.js&amp;3.9.1/build/cache-offline/cache-offline-min.js&amp;3.9.1/build/plugin/plugin-min.js&amp;3.9.1/build/cache-plugin/cache-plugin-min.js&amp;moodle/1385025328/core/tooltip/tooltip-min.js&amp;moodle/1385025328/core/popuphelp/popuphelp-min.js" async=""></script>
-<script charset="utf-8" id="yui_3_9_1_2_1386055242465_275" src="http://localhost/Photography-Academy/theme/yui_combo.php?moodle/1385025328/core/formautosubmit/formautosubmit-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
-<link rel="stylesheet" type="text/css" href="http://localhost/Photography-Academy/theme/styles.php/anomaly/1385025328/all">
+<script charset="utf-8" id="yui_3_9_1_2_1386055242465_275" src="../../theme/yui_combo.php?moodle/1385025328/core/formautosubmit/formautosubmit-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+<link rel="stylesheet" type="text/css" href="../../theme/styles.php/anomaly/1385025328/all">
 <script type="text/javascript" src="http://localhost/Photography-Academy/lib/javascript.php/1385025328/lib/javascript-static.js"></script>
 <style type="text/css"></style>
 </head>
