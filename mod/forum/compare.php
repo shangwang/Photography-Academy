@@ -1,3 +1,55 @@
+<!-- Javascript goes in the document HEAD -->
+<script type="text/javascript">
+function altRows(id){
+	if(document.getElementsByTagName){  
+		
+		var table = document.getElementById(id);  
+		var rows = table.getElementsByTagName("tr"); 
+		 
+		for(i = 0; i < rows.length; i++){          
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}      
+		}
+	}
+}
+window.onload=function(){
+	altRows('alternatecolor');
+}
+</script>
+
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+}
+</style>
+
 <?php 
 
 ?>
@@ -51,15 +103,107 @@
      <div id="region-main-wrap">
      <div id="region-main">
           <div class="region-content">
+		  
+               <!--
+			   <p><img id="image1" ></p>
+               <p></p>
                <p><img id="image1" ></p>
                <p></p>
-               <p><img id="image2" ></p>
-               <p></p>
                <p><img id="image3" ></p>
-               <p></p>                        
-               </div>
-           </div>                    
-      </div>                
+               <p></p>               
+			   -->
+			   <table class="altrowstable" id="alternatecolor">
+			   <tr>
+			   <th>Parameter</th>
+			   <td >
+			   <img id="image1" >
+			   </td>
+			   <td ><img id="image2" ></td>
+			   <td ><img id="image3" ></td>			   
+			   </tr>  
+			   <tr>
+			   <th>Make</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr>  
+			   <tr>
+			   <th>Model</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr>
+			   <tr>
+			   <th>Exposure Time</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr>  
+			   <tr>
+			   <th>F-Number</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr>    
+			   <tr>
+			   <th>ISO</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>Focal Length</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>ExposureBias</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>WhiteBalance</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>Saturation</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>Sharpness</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>Software</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>DPI</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   <tr>
+			   <th>Date</th>
+			   <td align="center">info1</td>
+			   <td align="center">info2</td>
+			   <td align="center">info3</td>
+			   </tr> 
+			   
+		    </table>  
+         </div>
+     </div>                    
+</div>                
       <div id="region-pre" class="block-region">
            <div class="region-content">
                         <a href="#sb-1" class="skip-block">Skip Navigation</a><div id="inst4" class="block_navigation  block hidden" role="navigation"><div class="corner-box"><div class="rounded-corner top-left"></div><div class="rounded-corner top-right"></div><div class="header"><div class="title" id="yui_3_9_1_2_1386056697464_243"><div class="block_action"><img class="block-hider-hide" tabindex="0" alt="Hide Navigation block" title="Hide Navigation block" src="../../theme/image.php/anomaly/core/1385025328/t/switch_minus"><img class="block-hider-show" tabindex="0" alt="Show Navigation block" title="Show Navigation block" src="../../theme/image.php/anomaly/core/1385025328/t/switch_plus"><input type="image" class="moveto customcommand requiresjs" alt="Move this to the dock" title="Dock Navigation block" src="../../theme/image.php/anomaly/core/1385025328/t/block_to_dock"></div><h2>Navigation</h2><div class="commands"></div></div></div><div class="content"><ul class="block_tree list"><li class="type_unknown depth_1 contains_branch" aria-expanded="true"><p class="tree_item branch canexpand navigation_node"><a href="../../">Home</a></p><ul><li class="type_setting depth_2 item_with_icon"><p class="tree_item leaf hasicon"><a href="../../my/"><img alt="" class="smallicon navicon" title="" src="../../theme/image.php/anomaly/core/1385025328/i/navigationitem">My home</a></p></li>
@@ -137,21 +281,21 @@
 	{	 
 		m=i+1;
 		imgSrc=url[i].split("=");
-		if (imgSrc[0]==image1.id)
+		if (imgSrc[0]==image1.id || imgSrc[0]==' '+image1.id)
 			{
 			n++;
 			image1.src=imgSrc[1];
-			image1.width=260; image1.height=140;
+			image1.width=300; image1.height=250;
 			}
-		else if (imgSrc[0]==" "+image2.id){
+		else if (imgSrc[0]==image2.id || imgSrc[0]==' '+image2.id){
 			n++;		
 			image2.src=imgSrc[1];
-			image2.width=260; image2.height=140;
+			image2.width=300; image2.height=250;
 			}
-		else if (imgSrc[0]==" "+image3.id){
+		else if (imgSrc[0]==image3.id || imgSrc[0]==' '+image3.id){
 			n++;		
 			image3.src=imgSrc[1];
-			image3.width=260; image3.height=140;
+			image3.width=300; image3.height=250;
 			}
 	}
 

@@ -265,11 +265,11 @@ echo '
     </div>
  
     <div class="primary_photo">
-	
+	<!--
 		<a href="image/photo of the week" title="Go to the previous Photo of the Day">
 
-
-	       <img src="image/photo of the week/1.jpg" width="990" height="742" alt="Landscape">	
+    -->
+	       <img src="image/photo of the week/1.jpg" width="600" height="442" alt="Landscape">	
 
 
 		</a>
