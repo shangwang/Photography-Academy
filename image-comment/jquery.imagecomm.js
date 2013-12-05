@@ -2,11 +2,11 @@
 
 	$.fn.imageComment = function(options) {
 		
-		return this.each(function(){
+		return this.each(function(i){
 			// Wrapping image with container
 			var container = $('<div class="imageCommentContainer"></div>');
 			$(this).wrap(container); // $(this) is the image element
-			container = $(".imageCommentContainer"); // For some reason, this needs to be reselected
+			container = $(".imageCommentContainer:last"); // For some reason, this needs to be reselected
 			
 			// Adding list element
 			var list = $('<ul class="imageCommentList"></ul>');
@@ -25,10 +25,13 @@
 			
 			// Load existing comments
 			if(options.load !== undefined){
-				var comments = options.load();
-				for(c in comments){
-					addCommentToList(comments[c].name, comments[c].comment, comments[c].x, comments[c].y, comments[c].width, comments[c].height);
+
+				var addComments = function(comments){
+					for(c in comments){
+						addCommentToList(comments[c].name, comments[c].comment, comments[c].x, comments[c].y, comments[c].width, comments[c].height);
+					}
 				}
+				options.load(this, addComments);
 			}
 
 			var startingX = 0;
@@ -107,9 +110,9 @@
 				commentBox.fadeIn('fast');
 			};
 
-			function postComment(){
+			function postComment(img){
 				// Retrieving values
-				var username = 'Victor Girotto'; // TODO dynamic username
+				var username = options.username ? options.username : 'John Doe'; // TODO dynamic username
 				var message = commentInput.val();
 				var x = startingX;
 				var y = startingY;
@@ -120,12 +123,12 @@
 				addCommentToList(username, message, x, y, width, height);
 
 				// Saving comment
-				options.save(username, message, x, y, width, height);
+				options.save(img, username, message, x, y, width, height);
 
 				// Cleaning up and hiding things
 				commentInput.val('');
 				commentBox.fadeOut('fast');
-				selection.fadeOut('fast');
+				selection.fadeOut('fast');	
 			};
 
 			/*
@@ -176,7 +179,11 @@
 			overlay.on('dragend', dragEnd);
 			
 			// Setting up click action for comment button
-			submitBtn.on('click', postComment);
+			var img = this;
+			submitBtn.on('click', function(e){
+				e.preventDefault();
+				postComment(img);
+			});
 
 			return this;
 		});
