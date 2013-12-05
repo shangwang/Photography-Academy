@@ -1,0 +1,9 @@
+CREATE TABLE `mdl_photo_comm` (
+  `url` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `comment` varchar(1000) NOT NULL,
+  `x` int(11) NOT NULL,
+  `y` int(11) NOT NULL,
+  `width` int(11) NOT NULL,
+  `height` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -1,3 +1,9 @@
+<?php
+require_once("../config.php") ; 
+require_login();
+$username = $USER->firstname;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,29 +11,15 @@
 	<link href="style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="layout.css">
 	<script src="jquery.js"></script>
-	<script src="image-comment.js"></script>
+	<script src="jquery.imagecomm.js"></script>
+	<script src="aux.js"></script>
 	<script>
 		$(function(){
-			
-			var save = function(username, message, x, y, width, height){
-				console.dir("Saving " + username + "'s comment");
-			}
-
-			var load = function(){
-				return [{name: 'Victor Girotto', comment: 'Wow! Very nice photo! I love this detail.', x: 20, y: 20, width: 100, height: 100},
-						{name: 'Miriam Gonzalez', comment: '@Victor, you obviously know nothing of photography...', x: 100, y: 20, width: 200, height: 300},
-						// {name: 'Chris Albrecth', comment: 'I think this photo should have some musical background'},
-						// {name: 'Jadiel De Armas', comment: '@Bictor!'},
-						// {name: 'Jadiel De Armas', comment: 'I mean, @Victor!'},
-						// {name: 'Emile da Silva', comment: '@Miriam I agree with you!'},
-						// {name: 'Jacquelinne Neumann', comment: 'Don\'t forget to smile!'},
-						// {name: 'Gianni Dalotto', comment: 'You should copyright this photo!'},
-						{name: 'Malcolm Baity', comment: 'Just shlap it on the neck!', x: 380, y: 200, width: 200, height: 50}];
-			};
 
 			$("img").imageComment({
 				save: save,
-				load: load
+				load: load,
+				username: '<?php echo $username ?>'
 			});
 
 		});
@@ -48,6 +40,9 @@
 		<p>What do you guys think? Took this using a shoebox, a couple of lenses and an arduíno</p>
 
 	  <img src="img.jpg" width="600" class="imageComment" />
+	  <img src="img2.png" width="600" class="imageComment" />
+	  <img src="img3.jpg" width="600" class="imageComment" />
+
 		<label>
 		<input type="submit" name="Vote" value="Vote">
 		</label>
